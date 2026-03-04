@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 01</title>
+</head>
+<body>
+    <h1>Cadastro funcionário</h1>
+    <form action="teste.jsp" method="post">
+        <label for="codFunc">Código Funcionário:</label>
+        <input type="number" name="codFunc" id="codFunc"> <br>
+        <label for="nome">Nome do Funcionário:</label>
+        <input type="text" name="nome" id="nome"> <br>
+        <label for="salario">Salário:</label>
+        <input type="number" name="salario" id="salario"><br><br>
+        <h1>Escolha Função:</h1>
+        <input type="radio" id="sec" name="funcao">
+        <label for="id">Secretário(a)</label><br>
+        <input type="radio" id="mot" name="funcao">
+        <label for="mot">Motorista</label><br>
+        <input type="radio" id="rad" name="funcao">
+        <label for="rad">Radialista</label><br><br>
+        <h1>Tipos de Projetos Envolvido dentro da Empresa:</h1>
+        <input type="checkbox" id="proj1" name="proj1">
+        <label for="proj1">Projeto "Aprender"</label> <br>
+        <input type="checkbox" id="proj2" name="proj2">
+        <label for="proj2">Projeto "Vida em Sociedade"</label><br>
+        <input type="checkbox" id="proj3" name="proj3">
+        <label for="proj3">Projeto "Cantare"</label><br><br>
+        <input type="color"><br>
+        <input type="date">
+        <input type="datetime-local">
+        <input type="email"> 
+        <input type="file">
+        <input type="hidden" name="teste" value="23">
+        <input type="message">
+        <input type="month" name="" id="">
+        <input type="range" name="" id="">
+        <input type="reset" value="">
+        <input type="search" name="" id="">
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

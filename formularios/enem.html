@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário ENEM</title>
+</head>
+<body>
+    <h1>Formulário ENEM</h1>
+    <form action="#" method="post">
+        
+            <legend>1º Dados Pessoais</legend>
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+                    
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" required><br><br>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required><br><br>
+                    
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                </td>
+            </tr>
+        </table>
+
+            <legend>2º Matérias</legend>
+        <table width = "100%" border="1">
+            <tr>
+                <td>
+                
+                    <p><strong>Biologia (3 questões):</strong></p>
+                    <p>1- </p>
+                    <label><input type="radio" name="biologia1" value="a"> (a)</label><br>
+                    <label><input type="radio" name="biologia1" value="b"> (b)</label><br>
+                    <label><input type="radio" name="biologia1" value="c"> (c)</label><br><br>
+                
+                    <p>2- </p>
+                    <label><input type="radio" name="biologia2" value="a"> (a)</label><br>
+                    <label><input type="radio" name="biologia2" value="b"> (b)</label><br>
+                    <label><input type="radio" name="biologia2" value="c"> (c)</label><br><br>
+                    
+                    <p>3- </p>
+                    <label><input type="radio" name="biologia3" value="a"> (a)</label><br>
+                    <label><input type="radio" name="biologia3" value="b"> (b)</label><br>
+                    <label><input type="radio" name="biologia3" value="c"> (c)</label><br><br>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <p><strong>Matemática (5 questões):</strong></p>
+            <p>1-</p>
+            <label><input type="radio" name="matematica1" value="a"> (a)</label><br>
+            <label><input type="radio" name="matematica1" value="b"> (b)</label><br>
+            <label><input type="radio" name="matematica1" value="c"> (c)</label><br><br>
+            
+            <p>2-</p>
+            <label><input type="radio" name="matematica2" value="a"> (a)</label><br>
+            <label><input type="radio" name="matematica2" value="b"> (b)</label><br>
+            <label><input type="radio" name="matematica2" value="c"> (c)</label><br><br>
+
+            <p>3-</p>
+            <label><input type="radio" name="matematica3" value="a"> (a)</label><br>
+            <label><input type="radio" name="matematica3" value="b"> (b)</label><br>
+            <label><input type="radio" name="matematica3" value="c"> (c)</label><br><br>
+            
+            <p>4-</p>
+            <label><input type="radio" name="matematica4" value="a"> (a)</label><br>
+            <label><input type="radio" name="matematica4" value="b"> (b)</label><br>
+            <label><input type="radio" name="matematica4" value="c"> (c)</label><br><br>
+            
+            <p>5-</p>
+            <label><input type="radio" name="matematica5" value="a"> (a)</label><br>
+            <label><input type="radio" name="matematica5" value="b"> (b)</label><br>
+            <label><input type="radio" name="matematica5" value="c"> (c)</label><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+            <p><strong>Português (6 questões):</strong></p>
+            <p>1-</p>
+            <input type="text" name="portugues1"><br><br>
+            
+            <p>2-</p>
+            <input type="text" name="portugues2"><br><br>
+            
+            <p>3-</p>
+            <input type="text" name="portugues3"><br><br>
+            
+            <p>4-</p>
+            <input type="text" name="portugues4"><br><br>
+            
+            <p>5-</p>
+            <input type="text" name="portugues5"><br><br>
+            
+            <p>6-</p>
+            <input type="text" name="portugues6"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+            <p><strong>História (3 questões):</strong></p>
+            <p>1-</p>
+            <label><input type="checkbox" name="historia1" value="a"> (a)</label><br>
+            <label><input type="checkbox" name="historia1" value="b"> (b)</label><br>
+            <label><input type="checkbox" name="historia1" value="c"> (c)</label><br><br>
+            
+            <p>2-</p>
+            <label><input type="checkbox" name="historia2" value="a"> (a)</label><br>
+            <label><input type="checkbox" name="historia2" value="b"> (b)</label><br>
+            <label><input type="checkbox" name="historia2" value="c"> (c)</label><br>
+            
+            <p>3-</p>
+            <label><input type="checkbox" name="historia3" value="a"> (a)</label><br>
+            <label><input type="checkbox" name="historia3" value="b"> (b)</label><br>
+            <label><input type="checkbox" name="historia3" value="c"> (c)</label><br>
+            
+                </td>
+            </tr>
+        </table>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+    </html>
