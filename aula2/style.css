@@ -1,0 +1,9 @@
+.imagem{
+    background-image: url(images.jfif);
+    width: 200px;
+    height: 200px;
+}
+
+p.dotted {
+    border-style: dotted dashed solid double;
+}
