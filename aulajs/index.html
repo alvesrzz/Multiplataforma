@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ModificarTexto(estado){
+            document.getElementById("sumir").style.display = estado;
+        }
+    </script>
+</head>
+<body>
+    <p id="palavra">Texto Inicial</p>
+    <h1 id="sumir">Ira sumir</h1>
+
+    <button onclick="ModificarTexto('none')">
+        Sumir
+    </button>
+    <button onclick="ModificarTexto('')">
+        Aparecer
+    </button>
+</body>
+</html>
