@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu de Opções</title>
+</head>
+<body>
+
+<script>
+let opcao;
+
+while (opcao !== 4) {
+    opcao = parseInt(prompt(
+        "Escolha uma opção:\n" +
+        "1: Calculo da Raiz quadrada de um numero\n" +
+        "2: Exponenciação de 2 numeros\n" +
+        "3: Calculo da função | a^2 + (a+b)\n" +
+        "4: Sair do programa"
+    ));
+
+    switch (opcao) {
+        case 1:
+            let x = parseFloat(prompt("Digite um número:"));
+            alert("Raiz quadrada: " + Math.sqrt(x));
+            break;
+
+        case 2:
+            let base = parseFloat(prompt("Digite a base:"));
+            let expoente = parseFloat(prompt("Digite o expoente:"));
+            alert("Resultado: " + Math.pow(base, expoente));
+            break;
+
+        case 3:
+            let a = parseFloat(prompt("Digite o valor de a:"));
+            let b = parseFloat(prompt("Digite o valor de b:"));
+            let resultado = Math.abs(Math.pow(a, 2) + (a + b));
+            alert("Resultado: " + resultado);
+            break;
+
+        case 4:
+            alert("Saindo do programa");
+            break;
+
+        default:
+            alert("Opção inválida!");
+    }
+}
+</script>
+
+</body>
+</html>
