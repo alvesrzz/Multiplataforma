@@ -1,51 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu de Opções</title>
 </head>
 <body>
+    <h1>Escolha uma das Opções</h1>
 
-<script>
-let opcao;
+    <table width="50%" border="1">
+        <tr>
+            <td>Comandos</td>
+            <td>Funções</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Cálculo da raiz quadrada</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Exponenciação de 2 números</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Cálculo da função a^2+raiz(a+b)</td>
+        </tr>
+    </table>
+    <input type="number" id="opcao">
+    <button onclick="mostrarCampos()">Continuar</button>
 
-while (opcao !== 4) {
-    opcao = parseInt(prompt(
-        "Bem-vindo: Escolha uma opção:\n" +
-        "1: Calculo da Raiz quadrada de um numero\n" +
-        "2: Exponenciação de 2 numeros\n" +
-        "3: Calculo da função | a^2 + (a+b)\n" +
-        "4: Sair do programa"
-    ));
+    <div id="campos"></div>
 
-    switch (opcao) {
-        case 1:
-            let x = parseFloat(prompt("Digite um numero:"));
-            alert("Raiz quadrada: " + Math.sqrt(x));
-            break;
+    <p id="resultado"></p>
 
-        case 2:
-            let base = parseFloat(prompt("Digite a base:"));
-            let expoente = parseFloat(prompt("Digite o expoente:"));
-            alert("Resultado: " + Math.pow(base, expoente));
-            break;
+    <script>
+        function mostrarCampos() {
+            let opcao = Number(document.getElementById("opcao").value);
+            let campos = document.getElementById("campos");
+            campos.innerHTML = "";
 
-        case 3:
-            let a = parseFloat(prompt("Digite o valor de a:"));
-            let b = parseFloat(prompt("Digite o valor de b:"));
-            let resultado = Math.abs(Math.pow(a, 2) + (a + b));
-            alert("Resultado: " + resultado);
-            break;
+            switch (opcao) {
+                case 1:
+                    campos.innerHTML = `
+                        <p>Raiz quadrada</p>
+                        <input type="number" id="num">
+                        <button onclick="calcular(1)">Calcular</button>
+                    `;
+                    break;
 
-        case 4:
-            alert("Saindo do programa");
-            break;
+                case 2:
+                    campos.innerHTML = `
+                        <h3>Exponenciação</h3>
+                        <input type="number" id="base"">
+                        <input type="number" id="expoente">
+                        <button onclick="calcular(2)">Calcular</button>
+                    `;
+                    break;
 
-        default:
-            alert("Opção inválida!");
-    }
-}
-</script>
+                case 3:
+                    campos.innerHTML = `
+                        <h3>Função</h3>
+                        <input type="number" id="a">
+                        <input type="number" id="b">
+                        <button onclick="calcular(3)">Calcular</button>
+                    `;
+                    break;
 
+                default:
+                    campos.innerHTML = "Opção inválida!";
+            }
+        }
+
+        function calcular(opcao) {
+            let resultado = "";
+
+            switch (opcao) {
+                case 1:
+                    let num = Number(document.getElementById("num").value);
+                    resultado = Math.sqrt(num);
+                    break;
+
+                case 2:
+                    let base = Number(document.getElementById("base").value);
+                    let expoente = Number(document.getElementById("expoente").value);
+                    resultado = Math.pow(base, expoente);
+                    break;
+
+                case 3:
+                    let a = Number(document.getElementById("a").value);
+                    let b = Number(document.getElementById("b").value);
+                    resultado = Math.pow(a, 2) + Math.sqrt(a + b);
+                    break;
+            }
+
+            document.getElementById("resultado").innerText = "Resultado: " + resultado;
+        }
+    </script>
 </body>
 </html>
