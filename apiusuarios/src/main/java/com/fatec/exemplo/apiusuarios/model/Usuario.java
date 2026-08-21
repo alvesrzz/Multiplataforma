@@ -3,11 +3,11 @@ package com.fatec.exemplo.apiusuarios.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name= "usuarios")
-public class Usuario {
+@Table(name="usuarios")
 
+public class Usuario {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
