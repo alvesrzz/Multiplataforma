@@ -28,4 +28,9 @@ public class UsuarioController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+
+    @GetMapping("usuarios/buscar")
+    public List<Usuario> buscarPorNome(@RequestParam String nome) {
+        return usuarioService.buscarPorNome(nome);
+    }
 }
